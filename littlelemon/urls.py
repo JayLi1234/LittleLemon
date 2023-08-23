@@ -25,8 +25,7 @@ router.register(r'tables', views.BookingViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('restaurant.urls')),
-    path('restaurant/booking/', include(router.urls)),
-    path('api/', include('LittleLemonAPI.urls')),
-    path('auth/', include('djoser.urls')),
-    path('auth/', include('djoser.urls.authtoken')),
+    path('api/bookings/', include(router.urls)),
+    path('api/', include('djoser.urls')),
+    path('api/', include('djoser.urls.authtoken')),
 ]

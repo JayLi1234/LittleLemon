@@ -1,4 +1,3 @@
-# LittleLemon
 ## API endpoints
 
 ### Registration APIs:<br />

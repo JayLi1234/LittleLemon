@@ -73,17 +73,38 @@ class MenuItemsView(generics.ListCreateAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
+    def get_permissions(self):
+        permission_classes = []
+        if self.request.method != 'GET':
+            PermissionError = [IsAuthenticated]
+        return [permission() for permission in permission_classes]
+
 class SingleMenuItemView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView):
-    permission_classes = [IsAuthenticated]
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
+    def get_permissions(self):
+        permission_classes = []
+        if self.request.method != 'GET':
+            PermissionError = [IsAuthenticated]
+        return [permission() for permission in permission_classes]
+
 class BookingViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
 
+    def get_permissions(self):
+        permission_classes = []
+        if self.request.method != 'GET':
+            PermissionError = [IsAuthenticated]
+        return [permission() for permission in permission_classes]
+
 class SingleBookingView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView):
-    permission_classes = [IsAuthenticated]
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
+
+    def get_permissions(self):
+        permission_classes = []
+        if self.request.method != 'GET':
+            PermissionError = [IsAuthenticated]
+        return [permission() for permission in permission_classes]

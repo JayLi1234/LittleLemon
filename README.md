@@ -1,14 +1,15 @@
 # LittleLemon
-Coursera Django website project
+Coursera Django website project<br />
 
-Registration APIs:
-/api/token/login (POST)
-/api/token/logout (POST)
+Registration APIs:<br />
+/api/users/ (POST) for registration<br />
+/api/token/login (POST)<br />
+/api/token/logout (POST)<br />
 
-Menu APIs:
-/api/menu-items (GET, POST)
-/api/menu-items/<int:pk> (GET, PUT, PATCH, DELETE)
+Menu APIs:<br />
+/api/menu-items (GET, POST)<br />
+/api/menu-items/<int:pk> (GET, PUT, PATCH, DELETE)<br />
 
-Booking APIs:
-/api/bookings/tables/ (GET, POST)
-/api/bookings/tables/<int:pk> (GET, PUT, PATCH, DELETE)
+Booking APIs:<br />
+/api/bookings/tables/ (GET, POST)<br />
+/api/bookings/tables/<int:pk> (GET, PUT, PATCH, DELETE)<br />

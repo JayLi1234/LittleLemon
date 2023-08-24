@@ -19,7 +19,8 @@
 pip install pipenv
 ```
 
-### 2. Setup MySQL database connection in littlelemon/settings.py
+### 2. Setup database connection in littlelemon/settings.py
+MySQL connection
 ```
 DATABASES = {
     'default': {
@@ -32,6 +33,16 @@ DATABASES = {
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
+    }
+}
+```
+
+Defulat SQLite connection
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 ```
